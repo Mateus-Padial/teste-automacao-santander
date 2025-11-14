@@ -25,6 +25,7 @@ export default defineConfig({
       cvc: process.env.CVC,
       monthvalidate: process.env.MONTHVALIDATE,
       yearvalidate: process.env.YEARVALIDATE,
+      baseTrelloapi: process.env.BASETRELLOAPI,
     },
     async setupNodeEvents(on, config) {
       await addCucumberPreprocessorPlugin(on, config);
