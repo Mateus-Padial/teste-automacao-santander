@@ -1,6 +1,6 @@
 # 🧪 Projeto de Automação de Testes – Cypress + Cucumber + Page Objects
 
-Este repositório contém uma suíte de testes automatizados para validação de fluxos WEB e API, utilizando:
+Este repositório contém uma suíte de testes automatizados para validação de fluxos WEB:
 
 - **Cypress 13+**
 - **Cucumber (BDD)**
