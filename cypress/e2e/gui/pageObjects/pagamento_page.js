@@ -34,7 +34,9 @@ const pagamentoPage = {
     },
 
     validaMensagemPreencherCampo() {
-        cy.contains('Preencha este campo').should('be.visible');
+        cy.on('window:alert', (texto) => {
+            expect(texto).to.eq('Preencha este campo');
+        });
 
     }
 

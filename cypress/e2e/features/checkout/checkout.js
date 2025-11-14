@@ -1,4 +1,4 @@
-var { Given, When, Then, DataTable } = require('@badeball/cypress-cucumber-preprocessor');
+var { Given, When, Then } = require('@badeball/cypress-cucumber-preprocessor');
 import checkoutPage from '../../gui/pageObjects/checkout_page';
 import pagamentoPage from '../../gui/pageObjects/pagamento_page';
 
@@ -27,6 +27,7 @@ Then(`deve ser exibida a mensagem de sucesso`, () => {
 });
 
 When(`preenche algumas informacoes do método de pagamento`, () => {
+    checkoutPage.acessarFormaDePagamento()
     pagamentoPage.preencherDadosCartaoInvalido()
 });
 

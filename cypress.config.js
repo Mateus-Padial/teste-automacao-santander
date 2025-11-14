@@ -4,7 +4,7 @@ import { addCucumberPreprocessorPlugin } from "@badeball/cypress-cucumber-prepro
 import { createEsbuildPlugin } from "@badeball/cypress-cucumber-preprocessor/esbuild";
 import * as dotenv from "dotenv";
 
-dotenv.config(); // 🔹 Carrega as variáveis do .env
+dotenv.config();
 
 export default defineConfig({
   e2e: {
@@ -14,6 +14,9 @@ export default defineConfig({
     chromeWebSecurity: false,
     viewportWidth: 1366,
     viewportHeight: 768,
+    video: true,         
+    videoCompression: 32, 
+    videosFolder: "cypress/videos",
     env: {
       login_email: process.env.CYPRESS_LOGIN_EMAIL,
       login_password: process.env.CYPRESS_LOGIN_PASSWORD,
@@ -34,4 +37,5 @@ export default defineConfig({
       return config;
     },
   },
+
 });
